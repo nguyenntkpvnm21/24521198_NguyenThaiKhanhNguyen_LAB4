@@ -1,5 +1,6 @@
 .field {
   display: grid;
+  grid-template-rows: auto auto minmax(1.375rem, auto);
   gap: calc(var(--space) / 4);
   min-width: 0;
 }
