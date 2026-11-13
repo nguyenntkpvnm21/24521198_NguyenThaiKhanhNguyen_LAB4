@@ -1,0 +1,31 @@
+:root {
+  --bg-page: #050b14;
+  --text-primary: #e6f1ff;
+  --card-bg: #0f1b2d;
+  --accent: #22d3ee;
+  --accent-contrast: #04121f;
+  --space: 1rem;
+  --radius: 12px;
+  color-scheme: dark;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background: var(--bg-page);
+  color: var(--text-primary);
+}
+
+#root {
+  display: grid;
+  gap: var(--space);
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: var(--space);
+}
