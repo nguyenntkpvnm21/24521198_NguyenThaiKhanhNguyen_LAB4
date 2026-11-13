@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router';
 import PeopleLayout from './components/PeopleLayout.jsx';
+import PersonDetail from './components/PersonDetail.jsx';
 import { PEOPLE } from './data/people.js';
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/" element={<Navigate to="/people" replace />} />
         <Route path="/people" element={<PeopleLayout people={PEOPLE} />}>
           <Route index element={<p>Select a person from the list.</p>} />
+        <Route path=":id" element={<PersonDetail people={PEOPLE} />} />
         </Route>
         <Route
           path="*"
