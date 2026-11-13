@@ -1,14 +1,10 @@
 import { useId, useState } from 'react';
 import { validateForm } from '../utils/validateForm.js';
-import { FormContext, useFormContext } from './FormContext.js';
+import { FormContext } from './FormContext.js';
+import { InputField } from './InputField.jsx';
 import styles from './SimpleForm.module.css';
 
 const INITIAL_VALUES = { fullName: '', email: '', studentId: '' };
-
-function FormStatus() {
-  const { errors } = useFormContext();
-  return <output>Fields with errors: {Object.keys(errors).length}</output>;
-}
 
 export function SimpleForm() {
   const headingId = useId();
@@ -35,7 +31,15 @@ export function SimpleForm() {
       <section className={styles.panel} aria-labelledby={headingId}>
         <h2 id={headingId}>Registration Form</h2>
         <form className={styles.form} noValidate>
-          <FormStatus />
+          <InputField label="Full name" name="fullName" type="text" autoComplete="name" />
+          <InputField label="Email" name="email" type="email" autoComplete="email" />
+          <InputField
+            label="Student ID"
+            name="studentId"
+            type="text"
+            inputMode="numeric"
+            autoComplete="off"
+          />
         </form>
       </section>
     </FormContext.Provider>
