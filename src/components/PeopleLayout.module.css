@@ -1,0 +1,24 @@
+.frame {
+  display: grid;
+  gap: var(--space);
+}
+
+.sidebar {
+  display: block;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  color: var(--text-primary);
+}
+
+.activeLink {
+  color: var(--accent);
+}
+
+.content {
+  display: block;
+}
