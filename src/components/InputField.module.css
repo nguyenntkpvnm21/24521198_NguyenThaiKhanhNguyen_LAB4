@@ -1,0 +1,7 @@
+.field {
+  display: block;
+}
+
+.error {
+  color: var(--danger);
+}

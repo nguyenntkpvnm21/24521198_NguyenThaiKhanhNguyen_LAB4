@@ -1,0 +1,16 @@
+.header {
+  display: grid;
+  gap: var(--space);
+}
+
+.topList {
+  list-style: none;
+}
+
+.topLink {
+  color: var(--text-primary);
+}
+
+.topLinkActive {
+  color: var(--accent);
+}
