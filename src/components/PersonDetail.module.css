@@ -1,7 +1,19 @@
 .details {
-  display: block;
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: calc(var(--space) / 2) var(--space);
+}
+
+.details dt {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.details dd {
+  overflow-wrap: anywhere;
 }
 
 .notFound {
-  display: block;
+  font-weight: 600;
+  color: var(--accent);
 }
