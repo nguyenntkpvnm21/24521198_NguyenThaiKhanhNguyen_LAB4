@@ -1,7 +1,30 @@
 .field {
-  display: block;
+  display: grid;
+  gap: calc(var(--space) / 4);
+  min-width: 0;
+}
+
+.field input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0 calc(var(--space) * 0.75);
+  font: inherit;
+  color: var(--text-primary);
+  background: var(--bg-page);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  border-radius: calc(var(--radius) / 2);
+}
+
+.field input[aria-invalid='true'] {
+  border-color: var(--danger);
+}
+
+.field input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .error {
+  font-size: 0.875rem;
   color: var(--danger);
 }

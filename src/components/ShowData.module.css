@@ -1,3 +1,17 @@
 .inspector {
-  display: block;
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: calc(var(--space) / 2) var(--space);
+  padding: var(--space);
+  background: var(--bg-page);
+  border-radius: calc(var(--radius) / 2);
+}
+
+.inspector dt {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.inspector dd {
+  overflow-wrap: anywhere;
 }
