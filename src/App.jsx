@@ -1,4 +1,5 @@
 import { Navigate, NavLink, Route, Routes } from 'react-router';
+import { ForumPage } from './components/ForumPage.jsx';
 import PeopleLayout from './components/PeopleLayout.jsx';
 import PersonDetail from './components/PersonDetail.jsx';
 import { SimpleForm } from './components/SimpleForm.jsx';
@@ -25,6 +26,11 @@ export default function App() {
                 Form
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/forum" className={getTopLinkClassName}>
+                Forum
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>
@@ -39,6 +45,14 @@ export default function App() {
           element={
             <main>
               <SimpleForm />
+            </main>
+          }
+        />
+        <Route
+          path="/forum"
+          element={
+            <main>
+              <ForumPage />
             </main>
           }
         />
