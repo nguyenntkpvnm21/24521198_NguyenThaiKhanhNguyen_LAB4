@@ -55,7 +55,7 @@
 - [x] Task 1.20: Fail test, then ShowData inspector, submit and reset (mandatory commit 3)
 - [x] Task 1.21: CSS layout, then responsive 375px (CSS only)
 - [x] Task 1.22: Verification (Profiler, DevTools, grep, lint, build) and AI failure notes
-- [ ] Task 1.23: Push to GitHub and tag lab4-sprint2-done
+- [x] Task 1.23: Push to GitHub and tag lab4-sprint2-done
 - [x] Task 1.24: Reserve error row so blur errors cannot shift the Submit button (CSS fix found in verification)
 
 * RULE: Never prompt AI with more than 1 sub-task at a time.
@@ -92,5 +92,55 @@
  *   SimpleForm: panel, form, actions, result | InputField: field, error
  *   ShowData: inspector | App: header, topList, topLink, topLinkActive
  * Headings: one h1 in App; form h2 (useId); inspector h3 "Submitted data"; no div; key={key}
+ */
+```
+
+# Work Breakdown Structure (Exercise 1, Sprint 3)
+- [x] Task 1.25: WBS and contract for the forum hook and API (docs commit)
+- [x] Task 1.26: .env.example and ignore .env
+- [x] Task 1.27: Add express and cors dependencies
+- [x] Task 1.28: Fail test, then Express forum API with CORS and payload validation
+- [x] Task 1.29: Fail test, then useForumMessages with AbortController
+- [x] Task 1.30: CSS Module scaffold for the forum (CSS only)
+- [x] Task 1.31: Fail test, then ForumPage channel switcher, message form and /forum route
+- [x] Task 1.32: CSS layout, then responsive 375px (CSS only)
+- [x] Task 1.33: Verification (Slow 3G cancel check, grep, lint, build) and AI failure notes
+- [x] Task 1.34: Full-stack error log verification document
+- [x] Task 1.35: Push to GitHub and tag lab4-sprint3-done
+
+* RULE: Never prompt AI with more than 1 sub-task at a time.
+* RULE: Mandatory commits contain JSX/JS only. CSS goes in its own commits (1.30, 1.32).
+
+## Sprint 3 contract
+```js
+/**
+ * Channels: 'nasa' | 'esports-tribunal' | 'notNasa'  (labels: NASA, Esports Tribunal, notNasa)
+ * Message: { id: string (uuid), author: string, text: string, timestamp: string (ISO) }
+ *
+ * REST API (Express 5, ESM, in-memory db). Slides use three different URLs;
+ * /api/messages/:forum is the single source of truth.
+ *   GET  /api/messages/:forum -> 200 Message[] | 404 { error }
+ *   POST /api/messages/:forum body { author, text } -> 201 Message | 400 { error } | 404 { error }
+ *     both strings, non-blank after trim, author <= 40, text <= 500
+ *     only author and text are stored (whitelist); id = crypto.randomUUID(); timestamp = server time
+ *   cors({ origin: CLIENT_ORIGIN }); express.json({ limit: '10kb' })
+ *   every response with status >= 400 is logged: ISO time, method, url, status
+ *   API_DELAY_MS adds artificial latency (used for the Slow 3G verification)
+ *
+ * useForumMessages(forumId) -> { data, loading, refreshing, error, postMessage, retry }
+ *   effect deps [forumId, refreshTick]; AbortController created inside the effect, cleanup aborts
+ *   state writes guarded by !controller.signal.aborted; !res.ok throws
+ *   loading = result.forumId !== forumId (derived); data is [] while loading
+ *   postMessage(payload): POST JSON to the current forum, throws the server error text, then refetches
+ *   retry(): refetch
+ *
+ * ForumPage: channel buttons (type="button", aria-pressed), output role=status, board aria-busy,
+ *   error in <section role="alert"> with Retry, <dl> of Fragment key={msg.id}
+ * MessageForm({ onSubmit }): useId labels Author / Message, Send button, error span role="alert"
+ *
+ * Routes: "/forum" -> <main><ForumPage /></main>; nav link Forum
+ * CSS Module classes: ForumPage: panel, channels, channelButton, status, board, messages, alert
+ *                     MessageForm: form, field, actions, error
+ * Env (.env.example): PORT, CLIENT_ORIGIN, API_DELAY_MS, VITE_API_URL; .env is git-ignored
  */
 ```
