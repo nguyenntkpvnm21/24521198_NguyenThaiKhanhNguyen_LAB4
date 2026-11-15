@@ -45,22 +45,23 @@
  */
 ```
 
-# Work Breakdown Structure (Exercise 2)
-- [ ] Task 2.1: WBS and contract for the form engine (docs commit)
-- [ ] Task 2.2: CSS Module scaffold and danger token (CSS only)
-- [ ] Task 2.3: Fail test, then synchronous validateForm rules
-- [ ] Task 2.4: Fail test, then FormContext and SimpleForm state (mandatory commit 1)
-- [ ] Task 2.5: Primary navigation and /form route
-- [ ] Task 2.6: Fail test, then InputField with useId, aria-invalid, aria-describedby (mandatory commit 2)
-- [ ] Task 2.7: Fail test, then ShowData inspector, submit and reset (mandatory commit 3)
-- [ ] Task 2.8: CSS layout, then responsive 375px (CSS only)
-- [ ] Task 2.9: Verification (Profiler, DevTools, grep, lint, build) and AI failure notes
-- [ ] Task 2.10: Push to GitHub and tag lab4-ex2-done
+# Work Breakdown Structure (Exercise 1, Sprint 2)
+- [x] Task 1.14: WBS and contract for the form engine (docs commit)
+- [x] Task 1.15: CSS Module scaffold and danger token (CSS only)
+- [x] Task 1.16: Fail test, then synchronous validateForm rules
+- [x] Task 1.17: Fail test, then FormContext and SimpleForm state (mandatory commit 1)
+- [x] Task 1.18: Primary navigation and /form route
+- [x] Task 1.19: Fail test, then InputField with useId, aria-invalid, aria-describedby (mandatory commit 2)
+- [x] Task 1.20: Fail test, then ShowData inspector, submit and reset (mandatory commit 3)
+- [x] Task 1.21: CSS layout, then responsive 375px (CSS only)
+- [x] Task 1.22: Verification (Profiler, DevTools, grep, lint, build) and AI failure notes
+- [ ] Task 1.23: Push to GitHub and tag lab4-sprint2-done
+- [x] Task 1.24: Reserve error row so blur errors cannot shift the Submit button (CSS fix found in verification)
 
 * RULE: Never prompt AI with more than 1 sub-task at a time.
-* RULE: Mandatory commits contain JSX/JS only. CSS goes in its own commits (2.2, 2.8).
+* RULE: Mandatory commits contain JSX/JS only. CSS goes in its own commits (1.15, 1.21).
 
-## Ex2 contract
+## Sprint 2 contract
 ```js
 /**
  * @typedef {{ fullName: string, email: string, studentId: string }} FormValues
