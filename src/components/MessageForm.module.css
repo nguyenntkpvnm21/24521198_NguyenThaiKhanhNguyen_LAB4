@@ -1,0 +1,15 @@
+.form {
+  display: block;
+}
+
+.field {
+  display: block;
+}
+
+.actions {
+  display: block;
+}
+
+.error {
+  color: var(--danger);
+}

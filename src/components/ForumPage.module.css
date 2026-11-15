@@ -1,0 +1,27 @@
+.panel {
+  display: block;
+}
+
+.channels {
+  list-style: none;
+}
+
+.channelButton {
+  display: inline-block;
+}
+
+.status {
+  display: block;
+}
+
+.board {
+  display: block;
+}
+
+.messages {
+  display: block;
+}
+
+.alert {
+  display: block;
+}
