@@ -146,15 +146,15 @@
 ```
 
 ## Homework 1A — Photo & Evidence Gallery (React Router v7)
-- [ ] Task H1.1 Update WBS for Homework 1A (docs)
-- [ ] Task H1.2 Add script that generates 8 sample SVG images in public/gallery
-- [ ] Task H1.3 Add photos.js data module (categories + photos)
-- [ ] Task H1.4 Write failing tests: category filter via URL (?category=)
-- [ ] Task H1.5 Write failing tests: dialog driven by ?photoId= (open, close, Back, invalid id)
-- [ ] Task H1.6 Scaffold CSS Modules (Layout + Shell)
-- [ ] Task H1.7 Add GalleryShell, About, NotFound and the /gallery route
-- [ ] Task H1.8 Implement PhotoGalleryLayout: category filter + photo grid
-- [ ] Task H1.9 Implement PhotoGalleryLayout: native <dialog> synced with URL
+- [x] Task H1.1 Update WBS for Homework 1A (docs)
+- [x] Task H1.2 Add script that generates 8 sample SVG images in public/gallery
+- [x] Task H1.3 Add photos.js data module (categories + photos)
+- [x] Task H1.4 Write failing tests: category filter via URL (?category=)
+- [x] Task H1.5 Write failing tests: dialog driven by ?photoId= (open, close, Back, invalid id)
+- [x] Task H1.6 Scaffold CSS Modules (Layout + Shell)
+- [x] Task H1.7 Add GalleryShell, About, NotFound and the /gallery route
+- [x] Task H1.8 Implement PhotoGalleryLayout: category filter + photo grid
+- [x] Task H1.9 Implement PhotoGalleryLayout: native <dialog> synced with URL
 - [ ] Task H1.10 Refactor, scan forbidden patterns, run lint
 - [ ] Task H1.11 Verify WCAG 2.2 AA and Lighthouse 100 on the production build
 - [ ] Task H1.12 Record real AI failures with evidence in AI_FAILURE_AUDIT.md
