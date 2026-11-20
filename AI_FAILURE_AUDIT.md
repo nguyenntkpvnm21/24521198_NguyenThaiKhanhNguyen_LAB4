@@ -18,3 +18,37 @@
 - **Lesson**: Content that appears on blur must never move interactive
   elements; reserve space for it (also prevents layout shift). Test the
   click path, not only typing.
+
+  
+## Failure #02: Test helper used `<output>`, which has the implicit ARIA role `status` (Lab 4, Homework 1A)
+
+- **Prompt**: Asked the AI for a step-by-step guide and contract-first failing
+  tests for Homework 1A (Photo & Evidence Gallery, URL-driven category filter
+  and native `<dialog>`).
+- **AI output**: The shared test helper (`testUtils.jsx`) rendered the current
+  URL inside an `<output data-testid="url">` element so tests could assert on
+  the location. The gallery itself also renders a live region
+  (`<p role="status">Showing N of 8 photos</p>`).
+- **Bug**: `<output>` maps to the ARIA role `status` by default, so the page
+  had two `status` elements. Every `screen.getByRole('status')` assertion
+  failed (2 tests in the category filter suite). The component was correct;
+  the AI-generated test code was wrong because it treated `<output>` as a
+  neutral element.
+- **Detection method**: Ran `npm test`; the filter suite failed on the
+  `getByRole('status')` assertion, even though the gallery rendered the
+  correct text. Traced it by checking which elements expose the `status` role
+  in the rendered tree.
+- **Proof**: Failing `npm test` output captured before the fix (in the
+  submission PDF).
+- **Engineering fix (commit 555d347)**: Replaced the probe element with
+  `<p data-testid="url">`, so the live region is the only `status` in the
+  tree.
+- **Verification after fix**: The two failing filter tests passed and the
+  whole filter suite was green. The remaining failures were the dialog tests
+  waiting for the dialog implementation; all tests passed once it was added
+  (68 passing).
+- **Lesson**: Native HTML elements carry implicit ARIA roles (`output` is
+  `status`, `form` can be a landmark, and so on). When tests query by role,
+  helper elements must not collide with the roles under test. Prefer a
+  neutral element (`<p>`, `<span>`) for test-only probes and check roles
+  before using a semantic element.
