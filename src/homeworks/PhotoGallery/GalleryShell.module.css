@@ -1,0 +1,36 @@
+.shell {
+  display: grid;
+  gap: var(--space);
+}
+
+.tabList {
+  display: flex;
+  gap: calc(var(--space) / 2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 var(--space);
+  border-bottom: 3px solid transparent;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.tab:hover {
+  border-bottom-color: var(--accent);
+}
+
+.tab:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.tabActive {
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}

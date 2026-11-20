@@ -1,0 +1,165 @@
+.gallery {
+  display: grid;
+  gap: var(--space);
+}
+
+.filterList,
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filterList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--space) / 2);
+}
+
+.filterLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0 var(--space);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.filterLink:hover {
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.filterLinkActive,
+.filterLinkActive:hover {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.filterLink:focus-visible,
+.card:focus-visible,
+.closeButton:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.status {
+  margin: 0;
+}
+
+.notice {
+  margin: 0;
+  padding: var(--space);
+  border: 1px solid var(--danger);
+  border-radius: var(--radius);
+  color: var(--danger);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space);
+}
+
+@media (min-width: 48em) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 72em) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.card {
+  display: grid;
+  gap: calc(var(--space) / 2);
+  padding: calc(var(--space) / 2);
+  background: var(--card-bg);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.card:hover {
+  border-color: var(--accent);
+}
+
+.cardImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  border-radius: calc(var(--radius) / 2);
+}
+
+.cardTitle {
+  font-weight: 600;
+}
+
+.dialog {
+  width: min(60rem, calc(100% - 2 * var(--space)));
+  max-height: calc(100dvh - 2 * var(--space));
+  padding: 0;
+  overflow: auto;
+  background: var(--card-bg);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+}
+
+.dialog::backdrop {
+  background: color-mix(in srgb, var(--bg-page) 85%, transparent);
+}
+
+.dialogBody {
+  display: grid;
+  gap: var(--space);
+  padding: var(--space);
+}
+
+.dialogHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space);
+}
+
+.dialogTitle {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.closeButton {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0 var(--space);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--accent-contrast);
+  font: inherit;
+  cursor: pointer;
+}
+
+.figure {
+  display: grid;
+  gap: calc(var(--space) / 2);
+  margin: 0;
+}
+
+.dialogImage {
+  width: 100%;
+  height: auto;
+  max-height: 60dvh;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+}
+
+.caption {
+  margin: 0;
+}
