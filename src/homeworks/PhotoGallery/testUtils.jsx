@@ -32,7 +32,7 @@ function RouterProbe() {
   const navigate = useNavigate();
   return (
     <footer>
-      <output data-testid="url">{`${location.pathname}${location.search}`}</output>
+      <p data-testid="url">{`${location.pathname}${location.search}`}</p>
       <button type="button" onClick={() => navigate(-1)}>
         Browser back
       </button>
