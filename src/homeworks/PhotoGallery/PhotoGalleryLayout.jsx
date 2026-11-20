@@ -1,17 +1,8 @@
 import { useEffect, useId, useRef } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { CATEGORIES, PHOTOS } from './photos.js';
+import { buildSearch } from './buildSearch.js';
 import styles from './PhotoGalleryLayout.module.css';
-
-function buildSearch(searchParams, changes) {
-  const next = new URLSearchParams(searchParams);
-  for (const [key, value] of Object.entries(changes)) {
-    if (value) next.set(key, value);
-    else next.delete(key);
-  }
-  const query = next.toString();
-  return query ? `?${query}` : '';
-}
 
 export default function PhotoGalleryLayout() {
   const [searchParams, setSearchParams] = useSearchParams();
