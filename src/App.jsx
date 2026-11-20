@@ -3,6 +3,10 @@ import { ForumPage } from './components/ForumPage.jsx';
 import PeopleLayout from './components/PeopleLayout.jsx';
 import PersonDetail from './components/PersonDetail.jsx';
 import { SimpleForm } from './components/SimpleForm.jsx';
+import GalleryAbout from './homeworks/PhotoGallery/GalleryAbout.jsx';
+import GalleryNotFound from './homeworks/PhotoGallery/GalleryNotFound.jsx';
+import GalleryShell from './homeworks/PhotoGallery/GalleryShell.jsx';
+import PhotoGalleryLayout from './homeworks/PhotoGallery/PhotoGalleryLayout.jsx';
 import { PEOPLE } from './data/people.js';
 import styles from './App.module.css';
 
@@ -31,6 +35,11 @@ export default function App() {
                 Forum
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/gallery" className={getTopLinkClassName}>
+                Gallery
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>
@@ -56,6 +65,11 @@ export default function App() {
             </main>
           }
         />
+        <Route path="/gallery" element={<GalleryShell />}>
+          <Route index element={<PhotoGalleryLayout />} />
+          <Route path="about" element={<GalleryAbout />} />
+          <Route path="*" element={<GalleryNotFound />} />
+        </Route>
         <Route
           path="*"
           element={
