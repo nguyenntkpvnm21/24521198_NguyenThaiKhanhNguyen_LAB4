@@ -9,7 +9,8 @@
     "lint": "oxlint",
     "test": "vitest run",
     "preview": "vite preview",
-    "server": "node --env-file=.env server/index.js"
+    "server": "node --env-file=.env server/index.js",
+    "swipe-server": "node --env-file=.env swipe-server/server.js"
   },
   "dependencies": {
     "cors": "^2.8.6",
