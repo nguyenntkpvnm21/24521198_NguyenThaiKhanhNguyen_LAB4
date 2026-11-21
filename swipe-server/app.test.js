@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { afterAll, beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import { createApp } from './app.js';
 
 const ID_A = 'a'.repeat(24);
@@ -49,7 +49,7 @@ let server;
 let baseUrl;
 let models;
 
-beforeEach(async () => {
+beforeAll(async () => {
   models = createFakeModels();
   const app = createApp({
     Profile: models.Profile,
@@ -62,7 +62,11 @@ beforeEach(async () => {
   baseUrl = `http://127.0.0.1:${server.address().port}`;
 });
 
-afterEach(
+beforeEach(() => {
+  models.swipes.length = 0;
+});
+
+afterAll(
   () =>
     new Promise((resolve) => {
       server.closeAllConnections?.();
