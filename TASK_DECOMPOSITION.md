@@ -174,4 +174,19 @@
 - [x] Task H1B.11 Implement SwipeDeck and the /swipe route
 - [x] Task H1B.12 Verify end to end with MongoDB, WCAG, 375px and forbidden patterns
 - [x] Task H1B.13 Record real AI failures with evidence in AI_FAILURE_AUDIT.md
-- [ ] Task H1B.14 Push and tag lab4-hw1b-done
+- [x] Task H1B.14 Push and tag lab4-hw1b-done
+
+## Homework 2 — Fair-Play Appeal Portal (slide 21)
+
+- [ ] H2.1 Confirm baseline (clean tree, tests green, hw1b tag on remote)
+- [ ] H2.2 Contract: fictional dossier data + `computeMatrix` (red tests first)
+- [ ] H2.3 Implement `computeMatrix` as a pure function
+- [ ] H2.4 `/dossier/:playerID` route + `DossierView` (404 for unknown id)
+- [ ] H2.5 Appeal form engine on top of the Sprint 2 context form
+- [ ] H2.6 Contract: `useAppealSlaTimer` (red tests with fake timers)
+- [ ] H2.7 Implement `useAppealSlaTimer` (absolute deadline + clock offset + visibilitychange)
+- [ ] H2.8 `appeal-server/` (Express 5 + Mongoose 8): GET dossier, POST appeal
+- [ ] H2.9 Wire client to API (loading / error / expired states)
+- [ ] H2.10 Accessibility and responsive pass (375px, 320px)
+- [ ] H2.11 `AI_FAILURE_AUDIT.md` entries (real failures only)
+- [ ] H2.12 Push and tag `lab4-hw2-done`
