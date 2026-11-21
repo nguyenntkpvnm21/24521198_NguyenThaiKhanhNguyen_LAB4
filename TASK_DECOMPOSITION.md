@@ -161,10 +161,10 @@
 - [x] Task H1.13 Push and tag lab4-hw1-done
 
 ## Homework 1B — Full-Stack Card-Swipe Deck (Express + Mongoose 8)
-- [ ] Task H1B.1 Update WBS for Homework 1B (docs)
-- [ ] Task H1B.2 Install mongoose@8, add .env.example, make sure .env is ignored
-- [ ] Task H1B.3 Write failing tests for swipeLogic (score, undo stack, remaining cards, gesture direction)
-- [ ] Task H1B.4 Implement swipeLogic
+- [x] Task H1B.1 Update WBS for Homework 1B (docs)
+- [x] Task H1B.2 Install mongoose@8, add .env.example, make sure .env is ignored
+- [x] Task H1B.3 Write failing tests for swipeLogic (score, undo stack, remaining cards, gesture direction)
+- [x] Task H1B.4 Implement swipeLogic
 - [ ] Task H1B.5 Write failing tests for validateSwipe and the API routes
 - [ ] Task H1B.6 Implement validateSwipe, models and createApp
 - [ ] Task H1B.7 Implement server.js (env guard, mongoose.connect, seed, listen)
