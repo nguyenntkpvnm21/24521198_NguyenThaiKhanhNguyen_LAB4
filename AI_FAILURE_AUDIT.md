@@ -52,3 +52,32 @@
   helper elements must not collide with the roles under test. Prefer a
   neutral element (`<p>`, `<span>`) for test-only probes and check roles
   before using a semantic element.
+
+  
+## Failure #03: Per-test HTTP server crashed the Vitest worker on Windows (Lab 4, Homework 1B)
+
+- **Prompt**: Asked the AI for contract-first tests for the Express swipe API
+  (Homework 1B backend).
+- **AI output**: `swipe-server/app.test.js` started a real HTTP server in
+  `beforeEach` and closed it in `afterEach`, so the server was created and
+  destroyed 14 times in one file while `fetch` kept connections open.
+- **Bug**: `npm test` ended with "Worker exited unexpectedly with exit code
+  3221226505" (0xC0000409) while running `app.test.js`. Vitest reported 105 of
+  112 tests passed and one unhandled error, so the file did not finish and the
+  result could have hidden failing tests.
+- **Detection method**: The unhandled-error summary at the end of `npm test`;
+  re-ran only `swipe-server/app.test.js` to confirm it was this file. Node
+  version: v24.15.0.
+- **Proof**: Terminal output of the crash captured before the fix (in the
+  submission PDF).
+- **Engineering fix**: Start one server in `beforeAll`,
+  clear the fake swipes in `beforeEach`, and close the server once in
+  `afterAll`.
+- **Verification after fix**: `app.test.js` finished without the unhandled
+  error and the full suite passed. The exact root cause inside Node was not
+  investigated; the repeated open/close of sockets on Windows is the likely
+  trigger because removing it made the crash disappear.
+- **Lesson**: Do not create and tear down a network server per test. Share
+  one server per file and reset state between tests. An "unhandled error"
+  from the test runner means some tests did not run, so a mostly green
+  summary is not proof that the suite passed.
