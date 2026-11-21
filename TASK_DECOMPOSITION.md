@@ -165,9 +165,9 @@
 - [x] Task H1B.2 Install mongoose@8, add .env.example, make sure .env is ignored
 - [x] Task H1B.3 Write failing tests for swipeLogic (score, undo stack, remaining cards, gesture direction)
 - [x] Task H1B.4 Implement swipeLogic
-- [ ] Task H1B.5 Write failing tests for validateSwipe and the API routes
-- [ ] Task H1B.6 Implement validateSwipe, models and createApp
-- [ ] Task H1B.7 Implement server.js (env guard, mongoose.connect, seed, listen)
+- [x] Task H1B.5 Write failing tests for validateSwipe and the API routes
+- [x] Task H1B.6 Implement validateSwipe, models and createApp
+- [x] Task H1B.7 Implement server.js (env guard, mongoose.connect, seed, listen)
 - [ ] Task H1B.8 Write failing tests for SwipeDeck (keyboard, pointer, undo, score)
 - [ ] Task H1B.9 Scaffold CSS Modules for SwipeDeck
 - [ ] Task H1B.10 Implement swipeApi and the data hook
