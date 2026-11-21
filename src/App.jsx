@@ -7,6 +7,7 @@ import GalleryAbout from './homeworks/PhotoGallery/GalleryAbout.jsx';
 import GalleryNotFound from './homeworks/PhotoGallery/GalleryNotFound.jsx';
 import GalleryShell from './homeworks/PhotoGallery/GalleryShell.jsx';
 import PhotoGalleryLayout from './homeworks/PhotoGallery/PhotoGalleryLayout.jsx';
+import SwipeDeck from './homeworks/SwipeDeck/SwipeDeck.jsx';
 import { PEOPLE } from './data/people.js';
 import styles from './App.module.css';
 
@@ -40,6 +41,11 @@ export default function App() {
                 Gallery
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/swipe" className={getTopLinkClassName}>
+                Swipe
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>
@@ -70,6 +76,14 @@ export default function App() {
           <Route path="about" element={<GalleryAbout />} />
           <Route path="*" element={<GalleryNotFound />} />
         </Route>
+        <Route
+          path="/swipe"
+          element={
+            <main>
+              <SwipeDeck />
+            </main>
+          }
+        />
         <Route
           path="*"
           element={
