@@ -158,4 +158,20 @@
 - [x] Task H1.10 Refactor, scan forbidden patterns, run lint
 - [x] Task H1.11 Verify WCAG 2.2 AA and Lighthouse on the production build (mobile: Performance 99, Accessibility 100, Best Practices 100, SEO 100; remaining Performance deduction is unused JavaScript in the shared bundle)
 - [x] Task H1.12 Record real AI failures with evidence in AI_FAILURE_AUDIT.md
-- [ ] Task H1.13 Push and tag lab4-hw1-done
+- [x] Task H1.13 Push and tag lab4-hw1-done
+
+## Homework 1B — Full-Stack Card-Swipe Deck (Express + Mongoose 8)
+- [ ] Task H1B.1 Update WBS for Homework 1B (docs)
+- [ ] Task H1B.2 Install mongoose@8, add .env.example, make sure .env is ignored
+- [ ] Task H1B.3 Write failing tests for swipeLogic (score, undo stack, remaining cards, gesture direction)
+- [ ] Task H1B.4 Implement swipeLogic
+- [ ] Task H1B.5 Write failing tests for validateSwipe and the API routes
+- [ ] Task H1B.6 Implement validateSwipe, models and createApp
+- [ ] Task H1B.7 Implement server.js (env guard, mongoose.connect, seed, listen)
+- [ ] Task H1B.8 Write failing tests for SwipeDeck (keyboard, pointer, undo, score)
+- [ ] Task H1B.9 Scaffold CSS Modules for SwipeDeck
+- [ ] Task H1B.10 Implement swipeApi and the data hook
+- [ ] Task H1B.11 Implement SwipeDeck and the /swipe route
+- [ ] Task H1B.12 Verify end to end with MongoDB, WCAG, 375px and forbidden patterns
+- [ ] Task H1B.13 Record real AI failures with evidence in AI_FAILURE_AUDIT.md
+- [ ] Task H1B.14 Push and tag lab4-hw1b-done
