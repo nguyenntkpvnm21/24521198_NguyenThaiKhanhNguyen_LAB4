@@ -1,0 +1,106 @@
+.deck {
+  display: grid;
+  gap: var(--space);
+  padding: var(--space);
+  background: var(--card-bg);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+}
+
+.deck:focus-visible,
+.actionButton:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.title,
+.hint,
+.status,
+.name,
+.bio {
+  margin: 0;
+}
+
+.notice {
+  margin: 0;
+  padding: var(--space);
+  border: 1px solid var(--danger);
+  border-radius: var(--radius);
+  color: var(--danger);
+}
+
+.card {
+  display: grid;
+  justify-items: center;
+  gap: calc(var(--space) / 2);
+  padding: calc(var(--space) * 2) var(--space);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  text-align: center;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.finished {
+  margin: 0;
+  padding: calc(var(--space) * 2) var(--space);
+  border: 1px dashed var(--accent);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: calc(var(--space) / 2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 48em) {
+  .actions {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.actionButton {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0 var(--space);
+  background: transparent;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font: inherit;
+  cursor: pointer;
+}
+
+.actionButton:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.actionPrimary,
+.actionPrimary:hover:not(:disabled) {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.actionButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
