@@ -168,10 +168,10 @@
 - [x] Task H1B.5 Write failing tests for validateSwipe and the API routes
 - [x] Task H1B.6 Implement validateSwipe, models and createApp
 - [x] Task H1B.7 Implement server.js (env guard, mongoose.connect, seed, listen)
-- [ ] Task H1B.8 Write failing tests for SwipeDeck (keyboard, pointer, undo, score)
-- [ ] Task H1B.9 Scaffold CSS Modules for SwipeDeck
-- [ ] Task H1B.10 Implement swipeApi and the data hook
-- [ ] Task H1B.11 Implement SwipeDeck and the /swipe route
-- [ ] Task H1B.12 Verify end to end with MongoDB, WCAG, 375px and forbidden patterns
-- [ ] Task H1B.13 Record real AI failures with evidence in AI_FAILURE_AUDIT.md
+- [x] Task H1B.8 Write failing tests for SwipeDeck (keyboard, pointer, undo, score)
+- [x] Task H1B.9 Scaffold CSS Modules for SwipeDeck
+- [x] Task H1B.10 Implement swipeApi and the data hook
+- [x] Task H1B.11 Implement SwipeDeck and the /swipe route
+- [x] Task H1B.12 Verify end to end with MongoDB, WCAG, 375px and forbidden patterns
+- [x] Task H1B.13 Record real AI failures with evidence in AI_FAILURE_AUDIT.md
 - [ ] Task H1B.14 Push and tag lab4-hw1b-done
