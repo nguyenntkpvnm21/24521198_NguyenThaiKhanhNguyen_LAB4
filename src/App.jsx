@@ -8,6 +8,8 @@ import GalleryNotFound from './homeworks/PhotoGallery/GalleryNotFound.jsx';
 import GalleryShell from './homeworks/PhotoGallery/GalleryShell.jsx';
 import PhotoGalleryLayout from './homeworks/PhotoGallery/PhotoGalleryLayout.jsx';
 import SwipeDeck from './homeworks/SwipeDeck/SwipeDeck.jsx';
+import DossierIndex from './homeworks/AppealPortal/DossierIndex.jsx';
+import DossierPage from './homeworks/AppealPortal/DossierPage.jsx';
 import { PEOPLE } from './data/people.js';
 import styles from './App.module.css';
 
@@ -46,6 +48,11 @@ export default function App() {
                 Swipe
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/dossier" className={getTopLinkClassName}>
+                Appeal
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>
@@ -81,6 +88,22 @@ export default function App() {
           element={
             <main>
               <SwipeDeck />
+            </main>
+          }
+        />
+        <Route
+          path="/dossier"
+          element={
+            <main>
+              <DossierIndex />
+            </main>
+          }
+        />
+        <Route
+          path="/dossier/:playerID"
+          element={
+            <main>
+              <DossierPage />
             </main>
           }
         />
