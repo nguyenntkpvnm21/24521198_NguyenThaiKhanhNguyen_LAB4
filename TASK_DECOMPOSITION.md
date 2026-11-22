@@ -185,7 +185,7 @@
 - [x] H2.5 Appeal form engine on top of the Sprint 2 context form
 - [x] H2.6 Contract: `useAppealSlaTimer` (red tests with fake timers)
 - [x] H2.7 Implement `useAppealSlaTimer` (absolute deadline + clock offset + visibilitychange)
-- [ ] H2.8 `appeal-server/` (Express 5 + Mongoose 8): GET dossier, POST appeal
+- [x] H2.8 `appeal-server/` (Express 5 + Mongoose 8): GET dossier, POST appeal
 - [ ] H2.9 Wire client to API (loading / error / expired states)
 - [ ] H2.10 Accessibility and responsive pass (375px, 320px)
 - [ ] H2.11 `AI_FAILURE_AUDIT.md` entries (real failures only)
