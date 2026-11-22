@@ -42,6 +42,10 @@ export default function DossierPage() {
         <dd>{penalties}</dd>
       </dl>
 
+      <Link className={styles.link} to={`/dossier/${dossier.id}/appeal`}>
+        File an appeal
+      </Link>
+
       <h3>Incidents</h3>
       <ul className={styles.list} aria-label="Incidents">
         {dossier.incidents.map((incident) => (
