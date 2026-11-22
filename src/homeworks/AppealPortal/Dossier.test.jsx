@@ -53,6 +53,12 @@ describe('DossierPage', () => {
     expect(himassRow.textContent).toContain('0.67');
   });
 
+  it('links to the appeal form for the selected player', () => {
+    renderAt('/dossier/himass');
+    const link = screen.getByRole('link', { name: /file an appeal/i });
+    expect(link.getAttribute('href')).toBe('/dossier/himass/appeal');
+  });
+  
   it('shows an in-page 404 for an unknown player id', () => {
     renderAt('/dossier/nobody');
     const alert = screen.getByRole('alert');
