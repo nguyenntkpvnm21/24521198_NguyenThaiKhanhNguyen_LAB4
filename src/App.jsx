@@ -10,6 +10,7 @@ import PhotoGalleryLayout from './homeworks/PhotoGallery/PhotoGalleryLayout.jsx'
 import SwipeDeck from './homeworks/SwipeDeck/SwipeDeck.jsx';
 import DossierIndex from './homeworks/AppealPortal/DossierIndex.jsx';
 import DossierPage from './homeworks/AppealPortal/DossierPage.jsx';
+import AppealForm from './homeworks/AppealPortal/AppealForm.jsx';
 import { PEOPLE } from './data/people.js';
 import styles from './App.module.css';
 
@@ -104,6 +105,14 @@ export default function App() {
           element={
             <main>
               <DossierPage />
+            </main>
+          }
+        />
+        <Route
+          path="/dossier/:playerID/appeal"
+          element={
+            <main>
+              <AppealForm />
             </main>
           }
         />
