@@ -81,3 +81,14 @@
   one server per file and reset state between tests. An "unhandled error"
   from the test runner means some tests did not run, so a mostly green
   summary is not proof that the suite passed.
+
+  ## Homework 2 — Fair-Play Appeal Portal
+
+No AI failures were observed during Homework 2, so there are no new failure entries.
+Each phase followed Contract, Fail Test, Implement, with the red and green test runs
+shown in the submission PDF.
+
+Checks run against the known hallucination patterns (slide 29): no React Router v5
+APIs, no removed Mongoose options, no hardcoded database secrets in tracked files,
+and `useEffect` used only to sync with external systems (fetch, timer, page
+visibility), never for validation.
